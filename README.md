@@ -1,6 +1,10 @@
 # LeBonScrap
 
-Scrap data from [Leboncoin.fr](https://www.leboncoin.fr), a french portal for selling new and second hand goods throughout the whole country.
+## Description
+
+LeBonScrap is a spider which collect data from [Leboncoin.fr](https://www.leboncoin.fr), a french portal for selling new and second hand goods throughout the whole country.
+The spider will crawl all the pagination links to scrap every ads from one search result of the real-estate category.
+To extract the data, LeBonScrap uses the open source and collaborative framework [Scrapy](https://github.com/scrapy/scrapy).
 
 ## Installation
 
@@ -12,7 +16,6 @@ git clone git@github.com:wbwlkr/lebonscrap.git
 
 ## Getting started
 
-LeBonScrap spider will scrap every ads from a search url real-estate category.
 
 Run the lebonscrap.py spider using the runspider command:
 
