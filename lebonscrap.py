@@ -1,10 +1,5 @@
 import scrapy
 import json
-from urllib.parse import urlencode
-import requests
-
-# To call the script :
-# scrapy runspider lebonscrap.py -o data.json
 
 class LeboncoinSpider(scrapy.Spider):
     name = "leboncoin"
@@ -36,7 +31,7 @@ class LeboncoinSpider(scrapy.Spider):
             'GES': response_ad.xpath('//div[10]/h2/span[2]/a/text()').extract_first(),
             'Classe énergie': response_ad.xpath('//div[10]/h2/span[2]/a/text()').extract_first(),
             'Auteur': response_ad.css('a[data-info*="pseudo_annonceur"]::text').extract_first().strip(),
-            'Telephone': phone,
+            'Téléphone': phone,
             'Remarques': ''
         }
 
