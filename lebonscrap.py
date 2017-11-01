@@ -6,6 +6,16 @@ class LeboncoinSpider(scrapy.Spider):
     start_urls = [
         'http://www.leboncoin.fr/li?ca=16_s&c=10&f=p&mre=800&sqs=6&ros=3&ret=1&ret=2&furn=2&location=Toulouse',
     ]
+    custom_settings = {
+        'COOKIES_ENABLED': False,
+        'DOWNLOAD_DELAY': 2.1,
+        'DEFAULT_REQUEST_HEADERS': {
+            'Referer': 'https://images.google.com/',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en',
+            'User-Agent':"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36",
+        }
+    }
 
     def parse(self, response_list):
         # follow links to advertissement pages
