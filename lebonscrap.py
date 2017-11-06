@@ -61,7 +61,7 @@ class LeboncoinSpider(scrapy.Spider):
                                   .extract_first().strip('m').strip(),
             'GES': response.xpath('//div[10]/h2/span[2]/a/text()')\
                               .extract_first(),
-            'Classe énergie': response.xpath('//div[10]/h2/span[2]/a/text()')\
+            'Classe énergie': response.xpath('//div[11]/h2/span[2]/a/text()')\
                                          .extract_first(),
             'Auteur': response.css('a[data-info*="pseudo_annonceur"]::text')\
                                  .extract_first().strip(),
